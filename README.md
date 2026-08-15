@@ -110,4 +110,4 @@ venv\Scripts\python rog_audio_switch.py --query
 
 ## 硬件适配参考
 
-- 协议参考:measureer/ROGDeltaTray (docs/protocol.md)
+
