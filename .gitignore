@@ -1,0 +1,12 @@
+# 虚拟环境与运行产物
+venv/
+__pycache__/
+*.pyc
+
+# 运行时生成
+state.txt
+rog_switch.log
+rog_switch.log.old
+fallback.json
+config.json
+.hermes-tmp.*
