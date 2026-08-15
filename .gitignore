@@ -10,3 +10,9 @@ rog_switch.log.old
 fallback.json
 config.json
 .hermes-tmp.*
+
+# PyInstaller 构建产物
+build/
+dist/
+*.spec
+Temp/

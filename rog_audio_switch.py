@@ -48,7 +48,11 @@ GUID_DEVINTERFACE_HID = (0x4d1e55b2, 0xf16f, 0x11cf, (0x88, 0xcb, 0x00, 0x11, 0x
 VID, PID = 0x0B05, 0x1AFA
 HEADSET_NAME = "ROG DELTA II"
 FALLBACK_NAME = "R27U81"
-BASE = os.path.dirname(os.path.abspath(__file__))
+# PyInstaller onefile 下 __file__ 指向临时解压目录, 必须用 exe 所在目录
+if getattr(sys, "frozen", False):
+    BASE = os.path.dirname(os.path.abspath(sys.executable))
+else:
+    BASE = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(BASE, "state.txt")
 LOG_FILE = os.path.join(BASE, "rog_switch.log")
 MEM_FILE = os.path.join(BASE, "fallback.json")
